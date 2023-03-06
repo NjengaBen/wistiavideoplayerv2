@@ -2720,36 +2720,36 @@
     <section
       class="section blue-back-block is-size-5 footersect is-paddingless"
     >
-      <div class="container is-flex is-justify-content-center">
-        <div class="columns">
-          <div class="column">
-            <a
-              href=""
-              data-bs-toggle="modal"
-              data-bs-target="#impressumModal"
-              style="color: #ffffff"
-            >
-              Impressum
-            </a>
-            <div
-              class="modal fade"
-              id="impressumModal"
-              tabindex="-1"
-              aria-labelledby="ISModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="ISModalLabel">Impressum</h5>
+      <div class="container px-2 py-3">
+        <div class="is-flex is-justify-content-center">
+          <div class="columns">
+            <div class="column">
+              <a
+                href="#"
+                onclick="openImpressumModal()"
+                class="js-modal-trigger"
+                data-target="#impressumModal"
+                style="color: #ffffff"
+              >
+                Impressum
+              </a>
+              <div class="modal" id="impressumModal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <h5 class="modal-card-title" id="ISModalLabel">
+                      Impressum
+                    </h5>
                     <button
                       type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
+                      onclick="closeImpressumModal()"
+                      class="button is-light"
                       aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
+                    >
+                      &#9986;
+                    </button>
+                  </header>
+                  <section class="modal-card-body">
                     <!-- ------------------------------  Script Impressum   ------------------------------- -->
                     <script>
                       window.nssUrl = "gevestor";
@@ -2766,50 +2766,50 @@
                       Dieser Text wird durch das Snippet mit der Kennung
                       <b>gevestor-imprint-lp-aph-msk</b> ersetzt
                     </div>
-                  </div>
+                  </section>
                   <!-- ------------------------------  Script Impressum   ------------------------------- -->
 
-                  <div class="modal-footer">
+                  <footer
+                    class="modal-card-foot is-flex is-justify-content-end"
+                  >
                     <button
                       type="button"
-                      class="btn btn-primary"
-                      data-bs-dismiss="modal"
+                      onclick="closeImpressumModal()"
+                      class="button is-dark"
                     >
                       Close
                     </button>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="column">
-            <a
-              href=""
-              data-bs-toggle="modal"
-              data-bs-target="#privacyModal"
-              style="color: #ffffff"
-              >Datenschutz</a
-            >
-            <div
-              class="modal fade"
-              id="privacyModal"
-              tabindex="-1"
-              aria-labelledby="DSModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                -
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="DSModalLabel">Datenschutz</h5>
+            <div class="column">
+              <a
+                href="#"
+                class="modal-open"
+                onclick="openPrivacyModal()"
+                data-target="#privacyModal"
+                style="color: #ffffff"
+                >Datenschutz</a
+              >
+              <div class="modal" id="privacyModal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  -
+                  <header class="modal-card-head">
+                    <h5 class="modal-card-title" id="DSModalLabel">
+                      Datenschutz
+                    </h5>
                     <button
                       type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
+                      onclick="closePrivacyModal()"
+                      class="button is-light"
                       aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
+                    >
+                      &#9986;
+                    </button>
+                  </header>
+                  <section class="modal-card-body">
                     <!-- ------------------------------  Script Datenschutz    ------------------------------- -->
 
                     <script>
@@ -2829,32 +2829,54 @@
                       Dieser Text wird durch das Snippet mit der Kennung
                       <b>Gevestor-Datenschutz</b> ersetzt
                     </div>
-                  </div>
-                  <div class="modal-footer">
+                  </section>
+                  <footer
+                    class="modal-card-foot is-flex is-justify-content-end"
+                  >
                     <button
                       type="button"
-                      class="btn btn-primary"
-                      data-bs-dismiss="modal"
+                      class="button is-dark"
+                      onclick="closePrivacyModal()"
                     >
                       Close
                     </button>
-                  </div>
+                  </footer>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container is-flex is-justify-content-center mt-5">
-        <div class="columns mt-3">
-          <div class="column">
-            <p class="has-text-centered has-text-grey-light">
-              © VNR Verlag für die Deutsche Wirtschaft AG
-            </p>
+        <div class="is-flex is-justify-content-center m-3">
+          <div class="columns mt-1">
+            <div class="column">
+              <p class="has-text-centered is-size-6 has-text-grey-dark">
+                © VNR Verlag für die Deutsche Wirtschaft AG
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      function openImpressumModal() {
+        // Add is-active class on the modal
+        document.getElementById("impressumModal").classList.add("is-active");
+      }
+
+      function openPrivacyModal() {
+        // Add is-active class on the modal
+        document.getElementById("privacyModal").classList.add("is-active");
+      }
+
+      // Function to close the modal
+      function closeImpressumModal() {
+        document.getElementById("impressumModal").classList.remove("is-active");
+      }
+
+      function closePrivacyModal() {
+        document.getElementById("privacyModal").classList.remove("is-active");
+      }
+    </script>
     <!-- Change video id here -->
     <script>
       video_id = "l1aqegexlj";
