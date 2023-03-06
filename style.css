@@ -280,14 +280,15 @@ p {
 }
 
 .blue-back-block {
-  background-image: radial-gradient(
+  background-color: #222b33;
+  /* background-image: radial-gradient(
     circle,
     #076b88,
     #044f79,
     #044f79,
     #09235b,
     #0f0d50
-  );
+  ); */
 }
 
 .blue-background2 {
@@ -295,8 +296,8 @@ p {
 }
 
 .blue-background3 {
-  background-color: #1a2270;
-  background-image: url(/assets/images/mountain.jpg);
+  background: rgb(173, 173, 173);
+  background-image: url("https://static.fid-images.de/Investor/lp/bilder/fv21/roa/0322/roa0323_04a.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -729,7 +730,8 @@ strong {
 }
 
 .purple-background {
-  background: #1ea0a6;
+  /* background: #1ea0a6; */
+  background: #222b33;
 }
 
 .black-background {
@@ -859,8 +861,13 @@ body {
   display: inline-block;
 }
 
+.headline-ac-edited {
+  font-size: 30px;
+}
+
 .headline-ac {
-  font-size: 9vw;
+  font-size: 1vw;
+  color: #e9ce97;
   letter-spacing: -0.08vw;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   line-height: 0.95;
