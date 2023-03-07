@@ -103,5 +103,5 @@ function smallVideo() {
   preload([
     "../assets/images/generic/" + ld_image_continue,
     "../assets/images/generic/" + ld_image_unmute,
-    "../assets/images/generic/loading-video.gif",
+    "../assets/images/loading-video.gif",
   ]);
