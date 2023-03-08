@@ -14,6 +14,7 @@ function resizeVideo(e, n) {
     "max-height: " + n + "px !important; max-width: " + d + "px !important"
   );
 }
+
 function bigVideo() {
   $(".cbh").hide(),
     $(".cbtb").hide(),
@@ -34,9 +35,10 @@ function bigVideo() {
       function () {}
     );
 }
+
 function smallVideo() {
-  $(".cbh").show(),
-    $(".cbtb").show(),
+  $(".cbh").show();
+  $(".cbtb").show(),
     $(".headline-box").show(),
     $(".video-lights").removeClass("black-background-vid"),
     $(".change-container").removeClass("container-full"),
