@@ -572,18 +572,8 @@ strong {
   z-index: 10 !important;
 }
 
-/* .vid-padding-mobile {
-  padding: 160% 0 0 0 !important;
-} */
-
 .vid-padding-desktop {
   padding: 56.25% 0 0 0 !important;
-}
-
-@media only screen and (max-width: 768.5px) {
-  .vid-padding-desktop {
-    padding: 160% 0 0 0 !important;
-  }
 }
 
 .vid-embed {
